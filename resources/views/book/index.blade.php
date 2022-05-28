@@ -35,7 +35,7 @@
                                     <a class="btn mt-auto btn-primary" href="{{ route('show_book', ['id' => $book->id]) }}">Details</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="btn mt-auto btn-success" href="">Buy</a>
+                                    <a class="btn mt-auto btn-success" href="{{route('purchase', ['id'=>$book->id])}}">Buy</a>
                                 </div>
                             </div>
                         </div>

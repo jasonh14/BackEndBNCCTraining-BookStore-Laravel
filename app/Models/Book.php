@@ -27,4 +27,9 @@ class Book extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }

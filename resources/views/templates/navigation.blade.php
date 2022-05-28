@@ -29,7 +29,7 @@
 
                     @if (Auth::user())
                         <li class="nav-item">
-                            <a href="/transaction" class="nav-link">
+                            <a href="{{route('transactions')}}" class="nav-link">
                                 Transactions
                             </a>
                         </li>

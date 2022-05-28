@@ -20,10 +20,9 @@ return new class extends Migration
             $table->string('comment');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users'); // Foreign Key users table
-            $table->foreign('book_id')->references('id')->on('books'); // Foreign Key books table
-
-            $table->softDeletes(); // Soft delete review
+            $table->foreign('book_id')->references('id')->on('books')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->softDeletes();
         });
     }
 
